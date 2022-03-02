@@ -1,0 +1,43 @@
+/* Color scheme */
+:root {
+    --main-bg-color: #fbf9eb;
+    --sec-bg-color: #DBD5C9;
+    --my-black: #333;
+    --my-black-2: #191919;
+    --main-accent-color: #ff1e00;
+    --sec-accent-color: #F9DDDD;
+  }
+  
+  /* CSS below is to reset default values such as margin, padding and box-sizing and increase the resolution of the text */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background: var(--main-bg-color);
+    border-left: solid var(--main-accent-color) 8px;
+    width: 100%;
+    font-family: "Poppins";
+  }
+
+  body, html {
+      min-height: 100%;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+	.header-image{
+		width: 50%;
+	}
+
+	.footer-image {
+		width: 30%;
+	}
