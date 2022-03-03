@@ -19,25 +19,352 @@
     text-rendering: optimizeLegibility;
   }
 
+	/* General styling */
+
   body {
     background: var(--main-bg-color);
-    border-left: solid var(--main-accent-color) 8px;
+    border-left: solid var(--main-accent-color) 4px;
     width: 100%;
+		min-height: 100%;
+		font-size: 14px;
     font-family: "Poppins";
   }
 
-  body, html {
-      min-height: 100%;
-  }
+	button {
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-webkit-font-smoothing: inherit;
+		-moz-osx-font-smoothing: inherit;
+		-webkit-appearance: none;
+		border: none;
+    outline: 0;
+    background: 0 0;
+    width: auto;
+    color: inherit;
+    font: inherit;
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+		font-size: 12px;
+	}
+
+	.color-toggle-button-red {
+		color: var(--main-accent-color);
+	}
+
+	/* Star animation */
+	.star {
+		width: 4vw;
+		height: 4vw;
+		-webkit-animation-name: star;
+		animation-name: star;
+		-webkit-animation-duration: 8s;
+		animation-duration: 8s;
+		-webkit-animation-timing-function: linear;
+		animation-timing-function: linear;
+		-webkit-animation-iteration-count: infinite;
+		animation-iteration-count:infinite
+	}
+
+	@-webkit-keyframes star {
+		0% {
+				transform:rotate(0turn)
+		}
+
+		50% {
+				transform:rotate(.5turn) scale(1.2)
+		}
+
+		to {
+				transform:rotate(1turn)
+		}
+}
+
+@keyframes star {
+		0% {
+				transform:rotate(0turn)
+		}
+
+		50% {
+				transform:rotate(.5turn) scale(1.2)
+		}
+
+		to {
+				transform:rotate(1turn)
+		}
+}
 
   p {
-    font-size: 14px;
+		font-family: 'Poppins';
+		font-size: 14px;
   }
 
-	.header-image{
-		width: 50%;
+	a {
+		text-decoration: none;
+		color: var(--my-black-2);
 	}
 
-	.footer-image {
-		width: 30%;
+	h3 {
+		font-size: 38px;
+		font-family: 'playfair display';
+		font-weight: 300;
 	}
+
+	h4 {
+		font-size: 5.5vw;
+    font-family: 'Playfair Display';
+    font-weight: 500;
+    margin-bottom: 20px;
+	}
+
+	h5 {
+		font-family: 'poppins';
+		font-size: 25px;
+		font-weight: 400;
+		margin-top: 10vw;
+	}
+
+	.section-name {
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 14px;
+		padding-top: 30px;
+	}
+
+	/* Styling of header section */
+	header {
+		padding: 20px 5% 0;
+	}
+
+	.color-mode {
+		display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+		margin-bottom: 30px;
+	}
+
+	nav {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		margin-bottom: 10px;
+		font-family: 'playfair display';
+	}
+
+	/* Styling of about me section */
+	.about-me {
+		position: relative;
+		padding-right: 5vw;
+	}
+
+	.header-image {
+		width: 100%;
+	}
+
+	.about-me-text-wrapper {
+		padding: 5vw 5vw 0;
+	}
+
+	.logo-Å {
+		font-size: 18vw;
+    font-weight: 500;
+		color: var(--main-accent-color);
+		line-height: 1.2;
+	}
+
+	/* Styling of service section */
+	.my-main-services {
+		padding: 50vw 0;
+	}
+
+	.service-row {
+		display: flex;
+		flex-direction: row;
+		line-height: 1.2;
+    padding: 1vw 6vw;
+    width: 100vw;
+		margin-top: 2vw;
+		justify-content: space-between;
+	}
+
+	.service-row h3 {
+		font-size: 5.5vw;
+	}
+
+	/* Styling of projects section */
+	.image-group {
+		display: flex;
+		justify-content: center;
+		padding: 80px 0;
+	}
+
+	.project-info {
+		text-align: center;
+		padding: 0 5vw;
+	}
+
+	.project-image {
+		width: 90%;
+	}
+
+	.project-name {
+		font-size: 6.5vw;
+	}
+
+	.project-description {
+		margin: 10vw 0;
+	}
+
+	.full-case {
+		font-size: 5.5vw;
+		padding: 10vw 0;
+	}
+
+	.first-project {
+		color: var(--main-bg-color);
+		background-color: var(--main-accent-color);
+	}
+
+	.first-project a {
+		color: var(--main-bg-color);
+	}
+
+	.image-group .first-project {
+		background-color: var(--main-accent-color);
+	}
+
+	.second-project {
+		color: var(--my-black-2);
+		background-color: var(--sec-bg-color);
+	}
+	
+	.image-group .second-project {
+		background-color: var(--sec-bg-color);
+	}
+
+	.all-cases {
+		text-align: center;
+		padding: 80px 6vw;
+	}
+
+	.all-cases h3 {
+		font-size: 8vw;
+    font-weight: 300;
+		padding-bottom: 25px;
+	}
+
+	.all-cases h5 {
+		font-size: 15px;
+    font-weight: 500;
+		margin-top:0;
+	}
+
+	.case-row {
+		cursor: pointer;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		font-family: 'poppins';
+		font-size: 12px;
+		padding:10px;
+		height: 70px;
+		border-bottom: 2px solid var(--my-black-2);
+	}
+
+	.case-row:hover {
+		background-color: var(--sec-accent-color);
+		color: var(--my-black-2);
+		transition: all 1.5s ease;
+	}
+
+/* Styling of toolbox section */
+	.toolbox {
+		display:flex;
+		flex-direction: column;
+		background-color: var(--sec-accent-color);
+		color: var(--main-accent-color);
+		padding: 5vw;
+	}
+
+	.toolbox .section-name {
+		padding: 30px;
+	}
+
+	.toolbox-section {
+		margin-bottom: 40px;
+	}
+
+	.toolbox-section h3 {
+		margin-bottom: 20px;
+		text-transform: uppercase;
+		font-size: 30px;
+	}
+
+	/* Styling of design thoughts section */
+	.design-quote {
+    font-size: 4vw;
+    font-weight: normal;
+    text-align: center;
+    margin: 3rem 3rem 6rem;
+    border-top: 0.5px solid var(--my-black);
+    border-bottom: 0.5px solid var(--my-black);
+    padding: 20px 0;
+}
+
+.design-thoughts {
+	background-color: var(--sec-bg-color);
+	padding-top: 50px;
+	padding-bottom: 100px;
+}
+
+.more-thoughts-wrapper h5 {
+	font-size: 15px;
+  font-weight: 500;
+	margin-top: 0;
+}
+
+.more-thoughts-wrapper p{
+	font-size: 12px;
+}
+
+.more-thoughts-wrapper a{
+	font-size: 12px;
+}
+
+.design-thoughts a {
+	color: var(--main-accent-color);
+}
+
+.design-thoughts .section-name {
+	color: var(--main-accent-color);
+}
+
+.contact {
+	padding: 5vw 5vw 0;
+}
+
+.no-more-words{
+	font-size: 35px;
+	font-weight: 500;
+	text-align: center;
+}
+
+.contact-me{
+	color: var(--main-accent-color);
+	font-size: 30px;
+}
+
+.footer-image {
+	width:100%;
+}
+
+
+
+
+	
+
+	
