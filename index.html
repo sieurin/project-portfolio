@@ -33,7 +33,7 @@
 </head>
 
 <body>
-	<header>
+	<header class="mobile-header">
 		
 		<div class="color-mode">
 			<button class="color-toggle-button-red">in red</button>
@@ -44,7 +44,20 @@
 			<a href="link to about page">about</a>
 			<a href="link to article page">projects</a>
 			<a href="link to journal page">contact</a>
-	</nav>
+		</nav>
+
+	</header>
+
+	<header class="desktop-header">
+		<button class="color-toggle-button-red">in red</button>
+		<img class="star" src="./sun-icon-red.png" alt="a red sun">
+		<nav>
+			<a href="link to about page">about</a>
+			<a href="link to article page">projects</a>
+			<a href="link to journal page">contact</a>
+		</nav>
+		<img class="star" src="./sun-icon-red.png" alt="a red sun">
+		<button class="color-toggle-button-light">in light</button>
 	</header>
 		
 	
@@ -76,11 +89,13 @@
 		</div>
 	</section>
 
+	<p class="section-name">Featured projects</p>
 	<section class="featured-projects">
 		<article class="project-wrapper first-project">
-			<p class="section-name">Featured projects</p>
 			<div class="image-group">
-				<img class="project-image" src="./francesco-bianco-TVsgRyKJDc0-unsplash.jpg" alt="image of a painting">
+				<div class="image-wrapper">
+					<img class="project-image" src="./francesco-bianco-TVsgRyKJDc0-unsplash.jpg" alt="image of a painting">
+				</div>
 			</div>
 			<div class="project-info">
 				<h3 class="project-name">Business site</h3>
@@ -93,7 +108,9 @@
 
 		<article class="project-wrapper second-project">
 			<div class="image-group">
-				<img class="project-image" src="./francesco-bianco-TVsgRyKJDc0-unsplash.jpg" alt="image of a painting">
+				<div class="image-wrapper">
+					<img class="project-image" src="./francesco-bianco-TVsgRyKJDc0-unsplash.jpg" alt="image of a painting">
+				</div>
 			</div>
 			<div class="project-info">
 				<h3 class="project-name">GitHub tracker</h3>
@@ -103,11 +120,10 @@
 				<a href="https://github.com/sieurin/project-github-tracker"><h3 class="full-case">Check full case +</h3></a>
 			</div>	
 		</article>
-
 	</section>
 
 	<section class="all-cases">
-		<h3> All cases</h3>
+		<h3 class="section-name"> All cases</h3>
 
 		<div class="case-row one">
 			<p>2022/01</p>
@@ -132,11 +148,10 @@
 			<h5>Weather app</h5>
 			<a>View full case</a>
 		</div>
-
 	</section>
 
+	<p class="section-name-toolbox">What I do</p>
 	<section class="toolbox">
-		<p class="section-name">What I do</p>
 		<div class="toolbox-section">
 			<h3>01 Code I write	</h3>
 			<p>HTML5</p>
@@ -167,45 +182,48 @@
 
 	<section class="design-thoughts">
 		<p class="section-name">Thought about code & design</p>
-		<h3 class="design-quote">I want to learn code to grow and create without boundaries. To build my ideas and broaden my creative skillset. I want to learn the language of making things, and changing things. The language to make my current work but better: more interesting, more unique, more relevant - more me. I want to learn code to add my voice, stamp, style and vision to the growing and diverse new world we live in. My goal is to create lifelong learning and develop both personally, programs & the world. I think it's time to take action: stop postponing happiness for the future and design it for the present. Design - and let it emerge from affinities, integration & love.</h2>
+		<h3 class="design-quote quote-one">I want to learn code to grow and create without boundaries. To build my ideas and broaden my creative skillset. I want to learn the language of making things, and changing things. The language to make my current work but better: more interesting, more unique, more relevant - more me. I want to learn code to add my voice, stamp, style and vision to the growing and diverse new world we live in.</h2>
 		
+		<p class="section-name">More thought from me</p>
 		<div class="more-thoughts-wrapper">
 			<div class="case-row one">
 				<p>2022/01</p>
-				<h5>A title goes here</h5>
+				<h5>Design as a method</h5>
 				<a href="www.meduim.com">Full story</a>
 			</div>
 	
 			<div class="case-row two">
 				<p>2022/01</p>
-				<h5>A title goes here</h5>
+				<h5>About leadership</h5>
 				<a href="www.meduim.com">Full story</a>
 			</div>
 	
 			<div class="case-row three">
 				<p>2022/02</p>
-				<h5>A title goes here</h5>
+				<h5>Design & innovation</h5>
 				<a href="www.meduim.com">Full story</a>
 			</div>
 	
 			<div class="case-row four">
 				<p>2022/02</p>
-				<h5>A title goes here</h5>
+				<h5>Design semantics</h5>
 				<a href="www.meduim.com">Full story</a>
 			</div>
 		</div>
+		<h3 class="design-quote quote-two">My goal is to create lifelong learning and develop both personally, programs & the world. I think it's time to take action: stop postponing happiness for the future and design it for the present. Design - and let it emerge from affinities, integration & love.</h3>
 	</section>
+
 	<h2 class="no-more-words">So, no more words</h2>
+
 	<section class="contact">
 		<img class="star" src="./sun-icon-red.png" alt="a red sun">
-		<img class="footer-image" src="./b&w.jpg" alt="image of me">
-		<a href="min mail"><h3 class="contact-me">Contact me</h3></a>
+		<a href="mailto:asa.sieurin@gmail.com"><h3 class="contact-me">Contact me</h3></a>
 	</section>
 	<footer>
 		<nav>
         <a href="www.facebook.com">linkedin</a>
         <a href="www.instagram">github</a>
-        <a href="länktillkontaktsida">email</a>
+        <a href="länktillkontaktsida">pinterest</a>
 		</nav>
 	</footer>
 

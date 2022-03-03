@@ -24,7 +24,7 @@
   body {
     background: var(--main-bg-color);
     border-left: solid var(--main-accent-color) 4px;
-    width: 100%;
+    width: calc(100% + 4px);
 		min-height: 100%;
 		font-size: 14px;
     font-family: "Poppins";
@@ -135,6 +135,10 @@
 	}
 
 	/* Styling of header section */
+	.desktop-header {
+		display: none;
+	}
+
 	header {
 		padding: 20px 5% 0;
 	}
@@ -198,7 +202,16 @@
 	.image-group {
 		display: flex;
 		justify-content: center;
-		padding: 80px 0;
+	}
+
+	.first-project .image-group, .first-project .project-info {
+		color: var(--main-bg-color);
+		background-color: var(--main-accent-color);
+	}
+
+	.second-project.image-group, .second-project .project-info {
+		color: var(--my-black-2);
+		background-color: var(--sec-bg-color);
 	}
 
 	.project-info {
@@ -206,8 +219,14 @@
 		padding: 0 5vw;
 	}
 
+	.image-wrapper {
+		width: 408px;
+		height: 528px;
+		overflow: hidden;
+	}
+
 	.project-image {
-		width: 90%;
+    height: 100%;
 	}
 
 	.project-name {
@@ -223,26 +242,8 @@
 		padding: 10vw 0;
 	}
 
-	.first-project {
-		color: var(--main-bg-color);
-		background-color: var(--main-accent-color);
-	}
-
 	.first-project a {
 		color: var(--main-bg-color);
-	}
-
-	.image-group .first-project {
-		background-color: var(--main-accent-color);
-	}
-
-	.second-project {
-		color: var(--my-black-2);
-		background-color: var(--sec-bg-color);
-	}
-	
-	.image-group .second-project {
-		background-color: var(--sec-bg-color);
 	}
 
 	.all-cases {
@@ -290,8 +291,11 @@
 		padding: 5vw;
 	}
 
-	.toolbox .section-name {
-		padding: 30px;
+	.section-name-toolbox{
+		color: var(--main-accent-color);
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 20px;
 	}
 
 	.toolbox-section {
@@ -305,14 +309,12 @@
 	}
 
 	/* Styling of design thoughts section */
-	.design-quote {
-    font-size: 4vw;
-    font-weight: normal;
-    text-align: center;
-    margin: 3rem 3rem 6rem;
-    border-top: 0.5px solid var(--my-black);
-    border-bottom: 0.5px solid var(--my-black);
-    padding: 20px 0;
+.design-quote {
+	font-size: 4vw;
+	font-weight: normal;
+	text-align: center;
+	margin: 3rem 3rem 6rem;
+	padding: 20px 0;
 }
 
 .design-thoughts {
@@ -327,11 +329,11 @@
 	margin-top: 0;
 }
 
-.more-thoughts-wrapper p{
+.more-thoughts-wrapper p {
 	font-size: 12px;
 }
 
-.more-thoughts-wrapper a{
+.more-thoughts-wrapper a {
 	font-size: 12px;
 }
 
@@ -347,19 +349,159 @@
 	padding: 5vw 5vw 0;
 }
 
-.no-more-words{
+.no-more-words { 
 	font-size: 35px;
 	font-weight: 500;
 	text-align: center;
+	margin-top: -28px;
 }
 
-.contact-me{
+.contact-me {
 	color: var(--main-accent-color);
 	font-size: 30px;
 }
 
-.footer-image {
-	width:100%;
+footer {
+	padding: 3rem 0;
+}
+
+/* Media Query - Tablet */
+@media screen and (min-width: 768px) {
+
+	.desktop-header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 5vh 3vh;
+	}
+
+	header a {
+		padding: 0 40px;
+	}
+
+	header p {
+		padding: 0 40px;
+	}
+
+	.mobile-header {
+		display: none;
+	}
+
+	.header-image {
+		width: 50%;
+		padding: 0;
+	}
+
+	.section-name {
+		padding-bottom: 50px;
+	}
+	.about-me {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.logo-Å {
+		font-size: 130px;
+	}
+
+	.my-main-services {
+    padding: 25vw 0px;
+}
+
+	.project-wrapper {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+	}
+
+	.image-group, .project-info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 50%;
+	}
+
+	.first-project .image-group {
+		color: var(--my-black-2);
+		background-color: var(--sec-bg-color);
+	}
+
+	.second-project.image-group {
+		background-color: var(--main-bg-color);
+	}
+
+	.project-name {
+    font-size: 2.5rem;
+	}
+
+	.project-info h4 {
+		font-size: 1.5rem;
+		padding: 0 7rem;
+	}
+
+	.project-description {
+		margin: 30px 0;
+	}
+
+	.full-case {
+		font-size: 30px;
+		padding: 30px 0;
+	}
+
+	.all-cases {
+		padding: 15rem 0;
+	}
+
+	.all-cases h3 {
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 14px;
+		padding-bottom: 5vw;
+		font-weight: 500;
+		font-family: 'poppins';
+	}
+
+	.case-row {
+			height: 140px;
+		}
+
+	.case-row h5 {
+			font-size: 2.5rem;
+	}
+
+	.design-quote {
+		font-size: 30px;
+    line-height: 1.5;
+	}
+
+	.quote-one {
+		padding: 2rem 13rem 4rem;
+	}
+	
+	.quote-two {
+		padding: 6rem 13rem 6rem;
+	}
+
+	.more-thoughts-wrapper {
+		padding-bottom: 50px;
+	}	
+
+	.toolbox {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.toolbox-section {
+		margin-bottom: 0;
+	}
+
+	.no-more-words {
+    font-size: 70px;
+    margin-top: -57px;
+		text-align: center;
 }
 
 
