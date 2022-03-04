@@ -2,7 +2,6 @@
 :root {
     --main-bg-color: #fbf9eb;
     --sec-bg-color: #DBD5C9;
-    --my-black: #333;
     --my-black-2: #191919;
     --main-accent-color: #ff1e00;
     --sec-accent-color: #F9DDDD;
@@ -22,6 +21,7 @@
 	/* General styling */
 	html {
 		scroll-behavior: smooth;
+		-webkit-scroll-behavior: smooth;
 	}
 
   body {
@@ -223,7 +223,9 @@
 	}
 
 	.project-image {
+		object-fit: contain;
     height: 100%;
+		width: 100%;
 	}
 
 	.first-project .image-group, .first-project .project-info {
@@ -231,7 +233,7 @@
 		background-color: var(--main-accent-color);
 	}
 
-	.second-project.image-group, .second-project .project-info {
+	.second-project .image-group, .second-project .project-info {
 		color: var(--my-black-2);
 		background-color: var(--sec-bg-color);
 	}
@@ -472,11 +474,7 @@
 		height: 75%;
 	}
 
-	.first-project .image-wrapper {
-		border: none;
-	}
-	
-	.second-project .image-wrapper {
+	.first-project .image-wrapper, .second-project .image-wrapper {
 		border: none;
 	}
 
@@ -489,11 +487,10 @@
 	}
 
 	.first-project .image-group {
-		color: var(--my-black-2);
 		background-color: var(--sec-bg-color);
 	}
 
-	.second-project.image-group {
+	.second-project .image-group {
 		background-color: var(--main-bg-color);
 	}
 
@@ -529,11 +526,11 @@
 	}
 
 	.case-row {
-			height: 140px;
+		height: 140px;
 		}
 
 	.case-row h5 {
-			font-size: 2.5rem;
+		font-size: 2.5rem;
 	}
 
 	/* Styling of thought section*/
@@ -569,12 +566,28 @@
     font-size: 70px;
     margin-top: -57px;
 		text-align: center;
+		animation: slideIn;
+		animation-duration: 3s;
 }
+
+	/* Animation of contact me-text */
+	@keyframes slideIn {
+		from {
+			margin-left: 100%;
+			width: 300%;
+		}
+
+  	to {
+   	 margin: 0 auto;
+   	 width: 100%;
+  	}
+	}
+
 	.contact {
 		padding: 5vw 7vw;
 	}
 
-	.contact h3 , .contact-me{
+	.contact h3 , .contact-me {
 		font-size: 40px;
 	}
 
