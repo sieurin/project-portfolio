@@ -20,6 +20,9 @@
   }
 
 	/* General styling */
+	html {
+		scroll-behavior: smooth;
+	}
 
   body {
     background: var(--main-bg-color);
@@ -29,6 +32,36 @@
 		font-size: 14px;
     font-family: "Poppins";
   }
+
+	p {
+		font-family: 'Poppins';
+		font-size: 14px;
+  }
+
+	a {
+		text-decoration: none;
+		color: var(--my-black-2);
+	}
+
+	h3 {
+		font-size: 38px;
+		font-family: 'playfair display';
+		font-weight: 300;
+	}
+
+	h4 {
+		font-size: 5.5vw;
+    font-family: 'Playfair Display';
+    font-weight: 500;
+    margin-bottom: 20px;
+	}
+
+	h5 {
+		font-family: 'poppins';
+		font-size: 25px;
+		font-weight: 400;
+		margin-top: 10vw;
+	}
 
 	button {
 		-webkit-user-select: none;
@@ -97,41 +130,11 @@
 		}
 }
 
-  p {
-		font-family: 'Poppins';
-		font-size: 14px;
-  }
-
-	a {
-		text-decoration: none;
-		color: var(--my-black-2);
-	}
-
-	h3 {
-		font-size: 38px;
-		font-family: 'playfair display';
-		font-weight: 300;
-	}
-
-	h4 {
-		font-size: 5.5vw;
-    font-family: 'Playfair Display';
-    font-weight: 500;
-    margin-bottom: 20px;
-	}
-
-	h5 {
-		font-family: 'poppins';
-		font-size: 25px;
-		font-weight: 400;
-		margin-top: 10vw;
-	}
-
 	.section-name {
 		text-align: center;
 		text-transform: uppercase;
 		font-size: 14px;
-		padding-top: 30px;
+		padding: 30px 0;
 	}
 
 	/* Styling of header section */
@@ -179,12 +182,12 @@
 		line-height: 1.2;
 	}
 
-	/* Styling of service section */
-	.my-main-services {
+	/* Styling of my services section */
+	.my-main-services, .contact{
 		padding: 50vw 0;
 	}
 
-	.service-row {
+	.service-row, .contact-row {
 		display: flex;
 		flex-direction: row;
 		line-height: 1.2;
@@ -194,14 +197,33 @@
 		justify-content: space-between;
 	}
 
-	.service-row h3 {
+	.service-row h3, .contact-row h3 {
 		font-size: 5.5vw;
 	}
 
-	/* Styling of projects section */
+	/* Styling of feature projects section */
 	.image-group {
 		display: flex;
 		justify-content: center;
+	}
+
+	.image-wrapper {
+		width: 408px;
+		height: 528px;
+		overflow: hidden;
+		text-align: center;
+	}
+
+	.first-project .image-wrapper {
+		border: 20px solid var(--main-accent-color);
+	}
+	
+	.second-project .image-wrapper {
+		border: 20px solid var(--sec-bg-color);
+	}
+
+	.project-image {
+    height: 100%;
 	}
 
 	.first-project .image-group, .first-project .project-info {
@@ -219,22 +241,12 @@
 		padding: 0 5vw;
 	}
 
-	.image-wrapper {
-		width: 408px;
-		height: 528px;
-		overflow: hidden;
-	}
-
-	.project-image {
-    height: 100%;
-	}
-
 	.project-name {
 		font-size: 6.5vw;
 	}
 
 	.project-description {
-		margin: 10vw 0;
+		margin: 10vw 5vw;
 	}
 
 	.full-case {
@@ -246,6 +258,7 @@
 		color: var(--main-bg-color);
 	}
 
+	/* Styling of more projects section */
 	.all-cases {
 		text-align: center;
 		padding: 80px 6vw;
@@ -276,9 +289,12 @@
 		border-bottom: 2px solid var(--my-black-2);
 	}
 
+	.case-row a {
+		color: var(--main-accent-color);
+	}
 	.case-row:hover {
-		background-color: var(--sec-accent-color);
-		color: var(--my-black-2);
+		background-color: var(--sec-bg-color);
+		color: var(--main-accent-color);
 		transition: all 1.5s ease;
 	}
 
@@ -309,65 +325,97 @@
 	}
 
 	/* Styling of design thoughts section */
-.design-quote {
-	font-size: 4vw;
-	font-weight: normal;
-	text-align: center;
-	margin: 3rem 3rem 6rem;
-	padding: 20px 0;
-}
+	.design-quote {
+		font-size: 4.5vw;
+		font-weight: normal;
+		text-align: center;
+		padding: 20px 0;
+	}
 
-.design-thoughts {
-	background-color: var(--sec-bg-color);
-	padding-top: 50px;
-	padding-bottom: 100px;
-}
+	.quote-one {
+		margin: 1rem 3rem 5rem;
+	}
+	
+	.quote-two {
+		margin: 6rem 3rem 3rem;
+	}
 
-.more-thoughts-wrapper h5 {
-	font-size: 15px;
-  font-weight: 500;
-	margin-top: 0;
-}
+	.design-thoughts {
+		background-color: var(--sec-bg-color);
+		padding-top: 50px;
+		padding-bottom: 100px;
+	}
 
-.more-thoughts-wrapper p {
-	font-size: 12px;
-}
+	.more-thoughts-wrapper h5 {
+		font-size: 15px;
+		font-weight: 500;
+		margin-top: 0;
+	}
 
-.more-thoughts-wrapper a {
-	font-size: 12px;
-}
+	.more-thoughts-wrapper p {
+		font-size: 12px;
+	}
 
-.design-thoughts a {
-	color: var(--main-accent-color);
-}
+	.more-thoughts-wrapper a {
+		font-size: 12px;
+	}
 
-.design-thoughts .section-name {
-	color: var(--main-accent-color);
-}
+	.more-thoughts-wrapper .case-row:hover {
+		background-color: var(--main-bg-color);
+		color: var(--main-accent-color);
+		transition: all 1.5s ease;
+	}
 
-.contact {
-	padding: 5vw 5vw 0;
-}
+	.design-thoughts .section-name {
+		color: var(--main-accent-color);
+	}
 
-.no-more-words { 
-	font-size: 35px;
-	font-weight: 500;
-	text-align: center;
-	margin-top: -28px;
-}
+	/* Styling of footer section */
+	.no-more-words { 
+		font-size: 35px;
+		font-weight: 500;
+		text-align: center;
+		margin-top: -28px;
+	}
 
-.contact-me {
-	color: var(--main-accent-color);
-	font-size: 30px;
-}
+	.contact {
+		padding: 25vw 7vw;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
-footer {
-	padding: 3rem 0;
-}
+	.contact h3 {
+		font-size: 30px;
+	}
 
-/* Media Query - Tablet */
+	.contact-me {
+		color: var(--main-accent-color);
+		font-size: 30px;
+	}
+
+	footer {
+		padding: 3rem 0;
+		background-color: var(--main-accent-color);
+	}
+
+	footer a {
+		color: var(--main-bg-color);
+	}
+
+	footer a:hover {
+		text-decoration: underline;
+	}
+
+/* Media Query - Tablet and Desktop */
 @media screen and (min-width: 768px) {
 
+	.star {
+		width: 2vw;
+		height: 2vw;
+	}
+
+	/* Styling of header*/
 	.desktop-header {
 		display: flex;
 		flex-direction: row;
@@ -396,6 +444,8 @@ footer {
 	.section-name {
 		padding-bottom: 50px;
 	}
+
+	/* Styling of about me section */
 	.about-me {
 		display: flex;
 		flex-direction: row;
@@ -409,10 +459,25 @@ footer {
     padding: 25vw 0px;
 }
 
+	/* Styling of feature projects section */
 	.project-wrapper {
 		display: flex;
 		flex-direction: row;
 		width: 100%;
+		height: 80vh;
+	}
+
+	.image-wrapper {
+		width: 75%;
+		height: 75%;
+	}
+
+	.first-project .image-wrapper {
+		border: none;
+	}
+	
+	.second-project .image-wrapper {
+		border: none;
 	}
 
 	.image-group, .project-info {
@@ -442,7 +507,7 @@ footer {
 	}
 
 	.project-description {
-		margin: 30px 0;
+		margin: 30px 30px;
 	}
 
 	.full-case {
@@ -471,6 +536,7 @@ footer {
 			font-size: 2.5rem;
 	}
 
+	/* Styling of thought section*/
 	.design-quote {
 		font-size: 30px;
     line-height: 1.5;
@@ -488,6 +554,7 @@ footer {
 		padding-bottom: 50px;
 	}	
 
+	/* Styling of toolbox section */
 	.toolbox {
 		display: flex;
 		flex-direction: row;
@@ -502,6 +569,19 @@ footer {
     font-size: 70px;
     margin-top: -57px;
 		text-align: center;
+}
+	.contact {
+		padding: 5vw 7vw;
+	}
+
+	.contact h3 , .contact-me{
+		font-size: 40px;
+	}
+
+	footer a:hover {
+		text-decoration: underline;
+		transition: ease-in;
+	}
 }
 
 
