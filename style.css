@@ -202,7 +202,7 @@
 		flex-direction: row;
 		line-height: 1.2;
     padding: 1vw 6vw;
-    width: 100vw;
+    
 		margin-top: 2vw;
 		justify-content: space-between;
 	}
@@ -276,7 +276,7 @@
 	/* Styling of more projects section */
 	.all-cases {
 		text-align: center;
-		padding: 80px 6vw;
+		padding: 80px 0;
 	}
 
 	.all-cases h5 {
