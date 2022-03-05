@@ -9,4 +9,4 @@ I decided to make my own design (in Figma) to also practice my UX/UI-skills, whi
 Have learned a lot about taking a project from an idea in my head, via Figma, to a live website. Hurray!
 
 # View it live
-
+https://goofy-bardeen-cc9241.netlify.app/

@@ -18,6 +18,48 @@
     text-rendering: optimizeLegibility;
   }
 
+/* main {
+	display: none;
+}
+
+.loading {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--sec-accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 100;
+}
+
+.spinner {
+  border: 6px solid var(--main-accent-color);
+  border-top: 6px solid white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% { 
+		transform: rotate(0deg); 
+	}
+  100% { 
+		transform: rotate(360deg); 
+	}
+}
+
+@keyframes shrink {
+  from { 
+		transform: scale(1); 
+	}
+  to { 
+		transform: scale(0); 
+	}
+} */
+
 	/* General styling */
 	html {
 		scroll-behavior: smooth;
@@ -29,8 +71,6 @@
     border-left: solid var(--main-accent-color) 4px;
     width: calc(100% + 4px);
 		min-height: 100%;
-		font-size: 14px;
-    font-family: "Poppins";
   }
 
 	p {
@@ -41,6 +81,7 @@
 	a {
 		text-decoration: none;
 		color: var(--my-black-2);
+		font-size: 12px;
 	}
 
 	h3 {
@@ -75,7 +116,7 @@
     background: 0 0;
     width: auto;
     color: inherit;
-    font: inherit;
+    font: 'poppins';
     text-align: center;
     text-decoration: underline;
     cursor: pointer;
@@ -116,7 +157,7 @@
 		}
 }
 
-@keyframes star {
+	@keyframes star {
 		0% {
 				transform:rotate(0turn)
 		}
@@ -128,13 +169,15 @@
 		to {
 				transform:rotate(1turn)
 		}
-}
+	}
 
 	.section-name {
 		text-align: center;
 		text-transform: uppercase;
 		font-size: 14px;
+		font-weight: 500;
 		padding: 30px 0;
+		font-family: 'poppins';
 	}
 
 	/* Styling of header section */
@@ -153,12 +196,12 @@
 		margin-bottom: 30px;
 	}
 
-	nav {
+	nav, .social {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-evenly;
 		margin-bottom: 10px;
-		font-family: 'playfair display';
+		font-family: 'poppins';
 	}
 
 	/* Styling of about me section */
@@ -169,6 +212,7 @@
 
 	.header-image {
 		width: 100%;
+		object-fit: cover;
 	}
 
 	.about-me-text-wrapper {
@@ -223,7 +267,7 @@
 	}
 
 	.project-image {
-		object-fit: contain;
+		object-fit: cover;
     height: 100%;
 		width: 100%;
 	}
@@ -253,7 +297,10 @@
 
 	.full-case {
 		font-size: 5.5vw;
-		padding: 10vw 0;
+		padding: 12vw 0;
+		font-family: 'playfair display';
+		font-weight: 300;
+		margin-top: 0;
 	}
 
 	.first-project a {
@@ -310,14 +357,21 @@
 	}
 
 	.section-name-toolbox{
-		color: var(--main-accent-color);
+		color: var(--my-black-2);
 		text-align: center;
 		text-transform: uppercase;
-		margin-bottom: 20px;
+		font-size: 14px;
+		padding: 30px 0;
+		font-family: 'poppins';
+		font-weight: 500;
 	}
 
 	.toolbox-section {
 		margin-bottom: 40px;
+	}
+
+	.toolbox-section p {
+		font-size: 14px;
 	}
 
 	.toolbox-section h3 {
@@ -372,16 +426,86 @@
 		color: var(--main-accent-color);
 	}
 
-	/* Styling of footer section */
+	/* Styling of footer/contact me section */
+
+	.animation {
+		margin-top: -23px;
+	}
+
 	.no-more-words { 
 		font-size: 35px;
 		font-weight: 500;
 		text-align: center;
-		margin-top: -28px;
+		animation: slideIn 3s forwards;
+		animation-delay: 15s;
+		margin-left: 100%;
+		width: 300%;
+	}
+
+	/* Animation of contact me-text */
+	@keyframes slideIn {
+		to {
+			margin: 0 auto;
+			width: 100%;
+		}
+	}
+
+	/* Smiley Animation */
+	@keyframes smiley {
+		0% {
+				transform:rotate(-15deg)
+		}
+
+		5% {
+				transform:rotate(25deg)
+		}
+
+		10% {
+				transform:rotate(-10deg)
+		}
+
+		40% {
+				transform:rotate(380deg)
+		}
+
+		50% {
+				transform:rotate(330deg)
+		}
+
+		55% {
+				transform:rotate(370deg)
+		}
+
+		80% {
+				transform:rotate(-20deg)
+		}
+
+		90% {
+				transform:rotate(30deg)
+		}
+
+		to {
+				transform:rotate(-15deg)
+		}
+	}
+
+	.smiley {
+		width: 40px;
+		height: 40px;
+		-webkit-animation-name: smiley;
+		animation-name: smiley;
+		-webkit-animation-duration: 5s;
+		animation-duration: 5s;
+		-webkit-animation-timing-function: cubic-bezier(.455, .03, .515, .955);
+		animation-timing-function: cubic-bezier(.455, .03, .515, .955);
+		-webkit-animation-iteration-count: infinite;
+		animation-iteration-count: infinite;
+		-webkit-animation-direction: alternate;
+		animation-direction:alternate
 	}
 
 	.contact {
-		padding: 25vw 7vw;
+		padding: 38vw 7vw;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -389,15 +513,28 @@
 
 	.contact h3 {
 		font-size: 30px;
+		line-height: 1.5;
 	}
 
 	.contact-me {
 		color: var(--main-accent-color);
 		font-size: 30px;
+		line-height: 1.5;
+		text-decoration: underline;
+		font-family: 'playfair display';
+	}
+
+	.contact-me:hover {
+		color: var(--sec-bg-color);
+		transition: all 1.5s ease;
+	}
+
+	.contact .star {
+		margin: 10px;
 	}
 
 	footer {
-		padding: 3rem 0;
+		padding: 2rem 0;
 		background-color: var(--main-accent-color);
 	}
 
@@ -409,7 +546,7 @@
 		text-decoration: underline;
 	}
 
-/* Media Query - Tablet and Desktop */
+/* MEDIA QUERY - TABLET / DESKTOP */
 @media screen and (min-width: 768px) {
 
 	.star {
@@ -426,8 +563,13 @@
 		padding: 5vh 3vh;
 	}
 
+	button {
+		font-size: 16px;
+	}
+
 	header a {
 		padding: 0 40px;
+		font-size: 16px;
 	}
 
 	header p {
@@ -448,6 +590,11 @@
 	}
 
 	/* Styling of about me section */
+
+	.about-me-text-wrapper {
+		width: 50%;
+	}
+
 	.about-me {
 		display: flex;
 		flex-direction: row;
@@ -459,7 +606,7 @@
 
 	.my-main-services {
     padding: 25vw 0px;
-}
+	}
 
 	/* Styling of feature projects section */
 	.project-wrapper {
@@ -556,31 +703,33 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		padding: 8vw 4vw;
 	}
 
 	.toolbox-section {
 		margin-bottom: 0;
 	}
 
+	.toolbox-section h3 {
+		font-size: 3vw;
+	}
+
+	.toolbox-section p {
+		font-size: 16px;
+	}
+
+	/* Styling of contact/footer section */
+	.animation {
+		margin-top: -60px;
+	}
+
 	.no-more-words {
-    font-size: 70px;
-    margin-top: -57px;
-		text-align: center;
-		animation: slideIn;
-		animation-duration: 3s;
-}
+    font-size: 100px;
+	}
 
-	/* Animation of contact me-text */
-	@keyframes slideIn {
-		from {
-			margin-left: 100%;
-			width: 300%;
-		}
-
-  	to {
-   	 margin: 0 auto;
-   	 width: 100%;
-  	}
+	.smiley {
+		width: 50px;
+		height: 50px;
 	}
 
 	.contact {
@@ -588,7 +737,11 @@
 	}
 
 	.contact h3 , .contact-me {
-		font-size: 40px;
+		font-size: 60px;
+	}
+
+	footer a {
+		font-size: 16px;
 	}
 
 	footer a:hover {
