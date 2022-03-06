@@ -400,9 +400,8 @@ nav,
 }
 
 /* Styling of footer/contact me section */
-
 .animation {
-  margin-top: -23px;
+  margin-top: -26px;
   overflow: hidden;
 }
 
@@ -533,6 +532,7 @@ footer a:hover {
 }
 
 /* A MEDIA QUERY FOR DESKTOP ONLY */
+
 @media screen and (min-width: 1024px) {
   .quote-one {
     padding: 2rem 13rem 4rem;
@@ -544,6 +544,7 @@ footer a:hover {
 }
 
 /* MEDIA QUERIES FOR TABLET AND DESKTOP */
+
 @media screen and (min-width: 768px) {
   .star {
     width: 2vw;
@@ -587,7 +588,6 @@ footer a:hover {
   }
 
   /* Styling of about me section */
-
   .about-me-text-wrapper {
     width: 50%;
   }
@@ -684,14 +684,6 @@ footer a:hover {
     font-size: 30px;
     line-height: 1.5;
   }
-
-  /* .quote-one {
-		padding: 2rem 13rem 4rem;
-	}
-	
-	.quote-two {
-		padding: 6rem 13rem 6rem;
-	} */
 
   .more-thoughts-wrapper {
     padding-bottom: 50px;
