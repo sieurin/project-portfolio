@@ -212,7 +212,7 @@ nav,
 /* Styling of about me section */
 .about-me {
   position: relative;
-  padding: 0 5vw;
+  padding: 0 5vw 0 0;
 }
 
 .header-image {
@@ -221,7 +221,7 @@ nav,
 }
 
 .about-me-text-wrapper {
-  padding: 5vw 5vw 0;
+  padding: 5vw 0 0 5vw;
 }
 
 .logo-Å {
@@ -243,6 +243,7 @@ nav,
   flex-direction: row;
   line-height: 1.2;
   padding: 1vw 6vw;
+  align-items: center;
 
   margin-top: 2vw;
   justify-content: space-between;
