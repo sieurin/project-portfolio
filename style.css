@@ -3,7 +3,7 @@
   --main-bg-color: #fbf9eb;
   --sec-bg-color: #dbd5c9;
   --my-black-2: #191919;
-  --main-accent-color: #ff1e00;
+  --main-accent-color: #f93700;
   --sec-accent-color: #5CC8D7FF;
 }
 
@@ -30,6 +30,38 @@ body {
   width: calc(100% + 4px);
   min-height: 100%;
   max-width: 100%;
+}
+
+.red .mobile-header {
+  background-color: var(--main-accent-color);
+  color: var(--main-bg-color);
+}
+
+.red .desktop-header {
+  background-color: var(--main-accent-color);
+  color: var(--main-bg-color);
+}
+
+.red nav a {
+  color: var(--main-bg-color);
+}
+
+.red .star-red {
+  display: none;
+}
+
+.red .star-white {
+  display: flex;
+}
+
+.red .about-me {
+  background-color: var(--main-accent-color);
+  color: var(--main-bg-color);
+  padding-bottom: 25vw;
+}
+
+.red .logo-Å {
+  color: var(--sec-bg-color);
 }
 
 p {
@@ -97,6 +129,7 @@ button {
 }
 
 /* Star animation */
+
 .star {
   width: 4vw;
   height: 4vw;
@@ -138,6 +171,10 @@ button {
   }
 }
 
+.star-white {
+  display: none;
+}
+
 .section-name {
   text-align: center;
   text-transform: uppercase;
@@ -168,14 +205,14 @@ nav,
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
   font-family: "poppins";
 }
 
 /* Styling of about me section */
 .about-me {
   position: relative;
-  padding-right: 5vw;
+  padding: 0 5vw;
 }
 
 .header-image {
@@ -597,12 +634,16 @@ footer a:hover {
     flex-direction: row;
   }
 
+  .red .about-me {
+    padding-bottom; 13vw;
+  }
+
   .logo-Å {
     font-size: 130px;
   }
 
   .my-main-services {
-    padding: 25vw 0px;
+    padding: 13vw 0;
   }
 
   /* Styling of feature projects section */

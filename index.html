@@ -38,9 +38,10 @@
     <!-- Mobile header -->
     <header class="mobile-header">
       <div class="color-mode">
-        <button class="color-toggle-button-red">in red</button>
-        <img class="star" src="./sun-icon-red.png" alt="a red rotating sun" />
-        <button class="color-toggle-button-light">in light</button>
+        <button onClick="setRedMode()" class="color-toggle-button-red">in red</button>
+        <img class="star star-red" src="./sun-icon-red.png" alt="a red rotating sun" />
+        <img class="star star-white" src="./sun-icon-white.png" alt="a red rotating sun" />
+        <button onClick="setLightMode()" class="color-toggle-button-light">in light</button>
       </div>
       <nav>
         <a href="#projects" class="link">projects</a>
@@ -51,15 +52,17 @@
 
     <!-- Desktop header -->
     <header class="desktop-header">
-      <button class="color-toggle-button-red">in red</button>
-      <img class="star" src="./sun-icon-red.png" alt="a red rotating sun" />
+      <button onClick="setRedMode()" class="color-toggle-button-red">in red</button>
+      <img class="star star-red" src="./sun-icon-red.png" alt="a red rotating sun" />
+      <img class="star star-white" src="./sun-icon-white.png" alt="a red rotating sun" />
       <nav>
         <a href="#projects" class="link">projects</a>
         <a href="#thoughts" class="link">thoughts</a>
         <a href="#contact" class="link">contact</a>
       </nav>
-      <img class="star" src="./sun-icon-red.png" alt="a red rotating sun" />
-      <button class="color-toggle-button-light">in light</button>
+      <img class="star star-red" src="./sun-icon-red.png" alt="a red rotating sun" />
+      <img class="star star-white" src="./sun-icon-white.png" alt="a red rotating sun" />
+      <button onClick="setLightMode()" class="color-toggle-button-light">in light</button>
     </header>
 
     <!-- About me section -->
