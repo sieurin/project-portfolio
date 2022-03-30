@@ -319,12 +319,12 @@ nav,
 }
 
 /* Styling of more projects section */
-.all-cases {
+.ui-code-cases {
   text-align: center;
   padding: 80px 0;
 }
 
-.all-cases h5 {
+.ui-code-cases h5 {
   font-size: 15px;
   font-weight: 500;
   margin-top: 0;
@@ -402,38 +402,38 @@ nav,
   margin: 6rem 3rem 3rem;
 }
 
-.design-thoughts {
+.ux-cases {
   background-color: var(--sec-bg-color);
   padding-top: 50px;
   padding-bottom: 100px;
 }
 
-.more-thoughts-wrapper h5 {
+.ux-cases-wrapper h5 {
   font-size: 15px;
   font-weight: 500;
   margin-top: 0;
 }
 
-.more-thoughts-wrapper p {
+.ux-cases-wrapper p {
   font-size: 12px;
 }
 
-.more-thoughts-wrapper a {
+.ux-cases-wrapper a {
   font-size: 12px;
   color: var(--my-black-2);
 }
 
-.more-thoughts-wrapper .case-row:hover {
+.ux-cases-wrapper .case-row:hover {
   background-color: var(--sec-accent-color);
   transition: all 1.5s ease;
 }
 
-.more-thoughts-wrapper h5:hover {
+.ux-cases-wrapper h5:hover {
   color: var(--sec-bg-color);
   transition: all 1s ease;
 }
 
-.design-thoughts .section-name {
+.ux-cases .section-name {
   color: var(--main-accent-color);
 }
 
@@ -545,7 +545,7 @@ nav,
 }
 
 footer {
-  padding: 2rem 0;
+  padding: 1rem 0;
   background-color: var(--main-accent-color);
 }
 
@@ -555,6 +555,13 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+.footer-text {
+  font-size: 10px;
+  text-align: center;
+  margin: 1rem 0 0 0;
+  color: var(--main-bg-color);
 }
 
 /* A MEDIA QUERY FOR TABLET ONLY */
@@ -700,11 +707,11 @@ footer a:hover {
     padding: 30px 0;
   }
 
-  .all-cases {
+  .ui-code-cases {
     padding: 15rem 0;
   }
 
-  .all-cases h3 {
+  .ui-code-cases h3 {
     text-align: center;
     text-transform: uppercase;
     font-size: 14px;
@@ -727,7 +734,7 @@ footer a:hover {
     line-height: 1.5;
   }
 
-  .more-thoughts-wrapper {
+  .ux-cases-wrapper {
     padding-bottom: 50px;
   }
 
@@ -772,6 +779,14 @@ footer a:hover {
   .contact h3,
   .contact-me {
     font-size: 60px;
+  }
+
+  footer {
+    padding: 2rem 0;
+  }
+
+  .footer-text {
+    margin: 4rem 0 0 0;
   }
 
   footer a {
