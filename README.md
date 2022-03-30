@@ -22,4 +22,4 @@ Accessibility aspects I have taken into account:
 I have made some considerations regarding design vs. accessibilty (which I think is an inevitable "crossroad"). In some cases the color contrast is not 100% but I personally like the color combination and still feel that it's sufficiently contrasting. I think that the important thing here is to understand the choices I make and how it affect the accessibilty, and to listen to your clients needs. Since it's me who is the "customer" for this project, I think that it's me who must make the decisions this time.
 
 # View it live
-https://goofy-bardeen-cc9241.netlify.app/
+https://a-sieurin.netlify.app
