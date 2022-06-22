@@ -67,6 +67,7 @@ body {
 p {
   font-family: "Poppins";
   font-size: 14px;
+  line-height: 1.7;
 }
 
 a {
@@ -100,7 +101,7 @@ h5 {
   font-family: "poppins";
   font-size: 25px;
   font-weight: 400;
-  margin-top: 10vw;
+  margin-top: 5vw;
 }
 
 button {
@@ -115,7 +116,7 @@ button {
   background: 0 0;
   width: auto;
   color: inherit;
-  font: "poppins";
+  font-family: "poppins";
   text-align: center;
   text-decoration: underline;
   cursor: pointer;
@@ -227,6 +228,7 @@ nav,
 .logo-Å {
   font-size: 18vw;
   font-weight: 500;
+  font-family: "playfair display";
   color: var(--main-accent-color);
   line-height: 1.2;
 }
