@@ -32,6 +32,10 @@ body {
   max-width: 100%;
 }
 
+header, footer {
+  text-transform: uppercase;
+}
+
 .red .mobile-header {
   background-color: var(--main-accent-color);
   color: var(--main-bg-color);
@@ -67,27 +71,38 @@ body {
 p {
   font-family: "Poppins";
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 a {
   text-decoration: none;
   color: var(--my-black-2);
-  font-size: 12px;
+  font-size: 14px;
 }
 
-h3,
+nav a:hover {
+  text-decoration: underline;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
 h2 {
-  font-size: 38px;
+  font-size: 40px;
   font-family: "playfair display";
-  font-weight: 300;
+  font-weight: 500;
+}
+
+h3 {
+  font-family: "playfair display";
+  font-weight: 500;
 }
 
 h4 {
-  font-size: 5.5vw;
+  font-size: 4.5vw;
   font-family: "Playfair Display";
   font-weight: 500;
-  margin-bottom: 20px;
 }
 
 h5 {
@@ -99,9 +114,9 @@ h5 {
 
 .bigger-p {
   font-family: "poppins";
-  font-size: 25px;
+  font-size: 24px;
   font-weight: 400;
-  margin-top: 5vw;
+  margin-top: 4vw;
 }
 
 button {
@@ -122,7 +137,7 @@ button {
   cursor: pointer;
   margin: 0;
   padding: 0;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .color-toggle-button-red {
@@ -297,22 +312,39 @@ nav,
 
 .project-info {
   text-align: center;
-  padding: 0 5vw;
+  padding: 0 3vw;
+}
+
+.project-info h4 {
+  font-size: 16px;
+  font-family: 'Poppins';
+  text-transform: uppercase;
+  font-weight: 300;
+  padding-top: 5vw;
+}
+
+.project-skills {
+  font-size: 16px;
+  font-family: 'Poppins';
+  text-transform: uppercase;
+  font-weight: 300;
 }
 
 .project-name {
   font-size: 6.5vw;
+  margin-bottom: 5vw;
 }
 
 .project-description {
   margin: 10vw 5vw;
+  font-weight: 300;
 }
 
 .full-case {
-  font-size: 5.5vw;
-  padding: 12vw 0;
+  font-size: 4.5vw;
+  padding: 10vw;
   font-family: "playfair display";
-  font-weight: 300;
+  font-weight: 500;
   margin-top: 0;
 }
 
@@ -326,8 +358,8 @@ nav,
   padding: 80px 0;
 }
 
-.ui-code-cases h5 {
-  font-size: 15px;
+.case-row h5 {
+  font-size: 4.5vw;
   font-weight: 500;
   margin-top: 0;
 }
@@ -339,9 +371,9 @@ nav,
   justify-content: space-between;
   align-items: center;
   font-family: "poppins";
-  font-size: 12px;
+  font-size: 14px;
   padding: 10px;
-  height: 70px;
+  height: 80px;
   border-bottom: 2px solid var(--my-black-2);
 }
 
@@ -378,14 +410,10 @@ nav,
   margin-bottom: 40px;
 }
 
-.toolbox-section p {
-  font-size: 14px;
-}
-
 .toolbox-section h3 {
   margin-bottom: 20px;
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 6.6vw;
 }
 
 /* Styling of design thoughts section */
@@ -404,10 +432,18 @@ nav,
   margin: 6rem 3rem 3rem;
 }
 
+/* Styling of UX-cases section */
+
 .ux-cases {
   background-color: var(--sec-bg-color);
   padding-top: 50px;
   padding-bottom: 100px;
+}
+
+/*
+
+.ux-cases .section-name {
+  color: var(--main-accent-color);
 }
 
 .ux-cases-wrapper h5 {
@@ -425,6 +461,8 @@ nav,
   color: var(--my-black-2);
 }
 
+*/
+
 .ux-cases-wrapper .case-row:hover {
   background-color: var(--sec-accent-color);
   transition: all 1.5s ease;
@@ -435,10 +473,6 @@ nav,
   transition: all 1s ease;
 }
 
-.ux-cases .section-name {
-  color: var(--main-accent-color);
-}
-
 /* Styling of footer/contact me section */
 .animation {
   margin-top: -26px;
@@ -446,7 +480,7 @@ nav,
 }
 
 .no-more-words {
-  font-size: 35px;
+  font-size: 32px;
   font-weight: 500;
   text-align: center;
   animation: slideIn 3s forwards;
@@ -525,7 +559,7 @@ nav,
 }
 
 .contact h3 {
-  font-size: 30px;
+  font-size: 5.5vw;
   line-height: 1.5;
 }
 
@@ -547,7 +581,7 @@ nav,
 }
 
 footer {
-  padding: 1rem 0;
+  padding: 50px 0;
   background-color: var(--main-accent-color);
 }
 
@@ -555,20 +589,16 @@ footer a {
   color: var(--main-bg-color);
 }
 
-footer a:hover {
-  text-decoration: underline;
-}
-
 .footer-text {
-  font-size: 10px;
+  font-size: 14px;
   text-align: center;
-  margin: 1rem 0 0 0;
+  margin: 30px 0 0 0;
   color: var(--main-bg-color);
 }
 
 /* A MEDIA QUERY FOR TABLET ONLY */
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 743px) and (max-width: 1024px) {
   .quote-one {
     padding: 2rem 6rem 4rem;
   }
@@ -592,7 +622,7 @@ footer a:hover {
 
 /* MEDIA QUERIES FOR TABLET AND DESKTOP */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 743px) {
   .star {
     width: 2vw;
     height: 2vw;
@@ -607,13 +637,12 @@ footer a:hover {
     padding: 5vh 3vh;
   }
 
-  button {
+  a, p, button {
     font-size: 16px;
   }
 
   header a {
     padding: 0 40px;
-    font-size: 16px;
   }
 
   header p {
@@ -664,9 +693,14 @@ footer a:hover {
     height: 80vh;
   }
 
-  .image-wrapper {
+  /* .image-wrapper {
     width: 75%;
     height: 75%;
+  } */
+  
+  .image-wrapper {
+  width: 35vw;
+  height: 35vw;
   }
 
   .first-project .image-wrapper,
@@ -692,27 +726,30 @@ footer a:hover {
   }
 
   .project-name {
-    font-size: 2.5rem;
+    font-size: 3.5vw;
+    margin-bottom: 1.5vw;
   }
 
-  .project-info h4 {
-    font-size: 1.5rem;
-    padding: 0 7rem;
-  }
+    /* .project-info h4 {
+      font-size: 2.5vw;
+      padding: 0 7rem;
+    } */
 
   .project-description {
-    margin: 30px 30px;
+    margin: 3vw;
+    font-size: 14px;
   }
 
   .full-case {
-    font-size: 30px;
-    padding: 30px 0;
+    font-size: 2.5vw;
+    padding: 3vw 0;
   }
 
   .ui-code-cases {
     padding: 15rem 0;
   }
 
+  /*
   .ui-code-cases h3 {
     text-align: center;
     text-transform: uppercase;
@@ -720,19 +757,22 @@ footer a:hover {
     padding-bottom: 5vw;
     font-weight: 500;
     font-family: "poppins";
-  }
+  } 
+  */
 
   .case-row {
     height: 140px;
   }
 
   .case-row h5 {
-    font-size: 2.5rem;
+    font-size: 4.5vw;
+    font-weight: 400;
+    margin-top: 0;
   }
 
   /* Styling of thought section*/
   .design-quote {
-    font-size: 30px;
+    font-size: 2vw;
     line-height: 1.5;
   }
 
@@ -756,10 +796,6 @@ footer a:hover {
     font-size: 3vw;
   }
 
-  .toolbox-section p {
-    font-size: 16px;
-  }
-
   /* Styling of contact/footer section */
   .animation {
     margin-top: -67px;
@@ -780,19 +816,11 @@ footer a:hover {
 
   .contact h3,
   .contact-me {
-    font-size: 60px;
-  }
-
-  footer {
-    padding: 2rem 0;
+    font-size: 4.5vw;
   }
 
   .footer-text {
-    margin: 4rem 0 0 0;
-  }
-
-  footer a {
-    font-size: 16px;
+    margin: 50px 0 0 0;
   }
 
   footer a:hover {
