@@ -1,4 +1,5 @@
 /* Color scheme */
+
 :root {
   --main-bg-color: #fbf9eb;
   --sec-bg-color: #dbd5c9;
@@ -8,6 +9,7 @@
 }
 
 /* Reset default values such as margin, padding and box-sizing and increase the resolution of the text */
+
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +21,7 @@
 }
 
 /* General styling */
+
 html {
   scroll-behavior: smooth;
   -webkit-scroll-behavior: smooth;
@@ -112,13 +115,6 @@ h5 {
   margin-top: 10vw;
 }
 
-.bigger-p {
-  font-family: "poppins";
-  font-size: 24px;
-  font-weight: 400;
-  margin-top: 4vw;
-}
-
 button {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -201,6 +197,7 @@ button {
 }
 
 /* Styling of header section */
+
 .desktop-header {
   display: none;
 }
@@ -226,9 +223,21 @@ nav,
 }
 
 /* Styling of about me section */
+
 .about-me {
   position: relative;
   padding: 0 5vw 0 0;
+}
+
+.bigger-p {
+  font-family: "poppins";
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 4vw;
+}
+
+.about-me-text p {
+  padding-bottom: 20px;
 }
 
 .header-image {
@@ -249,6 +258,7 @@ nav,
 }
 
 /* Styling of my services section */
+
 .my-main-services,
 .contact {
   padding: 50vw 0;
@@ -271,7 +281,25 @@ nav,
   font-size: 5.5vw;
 }
 
+.red-underline {
+  text-decoration: underline;
+  text-decoration-color: var(--main-accent-color);
+  text-underline-position: from-font;
+  text-decoration-thickness: 0.08em;
+}
+
+.red-underline:hover {
+  text-decoration-color: var(--main-bg-color);
+  color: var(--main-accent-color);
+  transition: all 1s ease;
+}
+
 /* Styling of feature projects section */
+
+#featured-projects {
+  padding: 50px;
+}
+
 .image-group {
   display: flex;
   justify-content: center;
@@ -353,6 +381,7 @@ nav,
 }
 
 /* Styling of more projects section */
+
 .ui-code-cases {
   text-align: center;
   padding: 80px 0;
@@ -374,7 +403,7 @@ nav,
   font-size: 14px;
   padding: 10px;
   height: 80px;
-  border-bottom: 2px solid var(--my-black-2);
+  border-bottom: 1px solid var(--my-black-2);
 }
 
 .case-row:hover {
@@ -387,7 +416,12 @@ nav,
   transition: all 1s ease;
 }
 
+.ux-code-cases {
+  text-align: center;
+}
+
 /* Styling of toolbox section */
+
 .toolbox {
   display: flex;
   flex-direction: column;
@@ -396,18 +430,17 @@ nav,
   padding: 5vw;
 }
 
-.section-name-toolbox {
-  color: var(--my-black-2);
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 14px;
-  padding: 30px 0;
-  font-family: "poppins";
-  font-weight: 500;
+.bg-toolbox {
+  background-color: var(--sec-accent-color);
+}
+
+#toolbox {
+  padding: 80px 0 30px;
+  color: var(--main-accent-color);
 }
 
 .toolbox-section {
-  margin-bottom: 40px;
+  margin: 40px 0;
 }
 
 .toolbox-section h3 {
@@ -416,64 +449,25 @@ nav,
   font-size: 6.6vw;
 }
 
-/* Styling of design thoughts section */
+/* Styling of quote section */
+
+.quote-section {
+  background-color: var(--sec-bg-color);
+  padding: 14vw 14vw 24vw;
+}
+
+.quote-section .section-name {
+  color: var(--main-accent-color);
+}
+
 .design-quote {
   font-size: 4.5vw;
   font-weight: normal;
   text-align: center;
-  padding: 20px 0;
-}
-
-.quote-one {
-  margin: 1rem 3rem 5rem;
-}
-
-.quote-two {
-  margin: 6rem 3rem 3rem;
-}
-
-/* Styling of UX-cases section */
-
-.ux-cases {
-  background-color: var(--sec-bg-color);
-  padding-top: 50px;
-  padding-bottom: 100px;
-}
-
-/*
-
-.ux-cases .section-name {
-  color: var(--main-accent-color);
-}
-
-.ux-cases-wrapper h5 {
-  font-size: 15px;
-  font-weight: 500;
-  margin-top: 0;
-}
-
-.ux-cases-wrapper p {
-  font-size: 12px;
-}
-
-.ux-cases-wrapper a {
-  font-size: 12px;
-  color: var(--my-black-2);
-}
-
-*/
-
-.ux-cases-wrapper .case-row:hover {
-  background-color: var(--sec-accent-color);
-  transition: all 1.5s ease;
-}
-
-.ux-cases-wrapper h5:hover {
-  color: var(--sec-bg-color);
-  transition: all 1s ease;
 }
 
 /* Styling of footer/contact me section */
+
 .animation {
   margin-top: -26px;
   overflow: hidden;
@@ -490,6 +484,7 @@ nav,
 }
 
 /* Animation of contact me-text */
+
 @keyframes slideIn {
   to {
     margin: 0 auto;
@@ -498,6 +493,7 @@ nav,
 }
 
 /* Smiley Animation */
+
 @keyframes smiley {
   0% {
     transform: rotate(-15deg);
@@ -596,28 +592,21 @@ footer a {
   color: var(--main-bg-color);
 }
 
+
 /* A MEDIA QUERY FOR TABLET ONLY */
 
 @media (min-width: 743px) and (max-width: 1024px) {
-  .quote-one {
+  /* .quote-one {
     padding: 2rem 6rem 4rem;
-  }
-
-  .quote-two {
-    padding: 6rem 5rem 6rem;
-  }
+  } */
 }
 
 /* A MEDIA QUERY FOR DESKTOP ONLY */
 
 @media screen and (min-width: 1024px) {
-  .quote-one {
+  /* .quote-one {
     padding: 2rem 13rem 4rem;
-  }
-
-  .quote-two {
-    padding: 6rem 13rem 6rem;
-  }
+  } */
 }
 
 /* MEDIA QUERIES FOR TABLET AND DESKTOP */
@@ -629,6 +618,7 @@ footer a {
   }
 
   /* Styling of header*/
+
   .desktop-header {
     display: flex;
     flex-direction: row;
@@ -664,6 +654,7 @@ footer a {
   }
 
   /* Styling of about me section */
+
   .about-me-text-wrapper {
     width: 50%;
   }
@@ -682,21 +673,17 @@ footer a {
   }
 
   .my-main-services {
-    padding: 13vw 0;
+    padding: 25vw 0;
   }
 
   /* Styling of feature projects section */
+
   .project-wrapper {
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 80vh;
   }
-
-  /* .image-wrapper {
-    width: 75%;
-    height: 75%;
-  } */
   
   .image-wrapper {
   width: 35vw;
@@ -730,11 +717,6 @@ footer a {
     margin-bottom: 1.5vw;
   }
 
-    /* .project-info h4 {
-      font-size: 2.5vw;
-      padding: 0 7rem;
-    } */
-
   .project-description {
     margin: 3vw;
     font-size: 14px;
@@ -745,20 +727,11 @@ footer a {
     padding: 3vw 0;
   }
 
-  .ui-code-cases {
-    padding: 15rem 0;
-  }
+  /* Styling of more projects section*/
 
-  /*
-  .ui-code-cases h3 {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 14px;
-    padding-bottom: 5vw;
-    font-weight: 500;
-    font-family: "poppins";
-  } 
-  */
+  .ui-code-cases {
+    padding: 13vw 0;
+  }
 
   .case-row {
     height: 140px;
@@ -770,17 +743,12 @@ footer a {
     margin-top: 0;
   }
 
-  /* Styling of thought section*/
-  .design-quote {
-    font-size: 2vw;
-    line-height: 1.5;
-  }
-
-  .ux-cases-wrapper {
-    padding-bottom: 50px;
+  .ux-code-cases {
+    margin-bottom: 140px;
   }
 
   /* Styling of toolbox section */
+
   .toolbox {
     display: flex;
     flex-direction: row;
@@ -796,7 +764,15 @@ footer a {
     font-size: 3vw;
   }
 
+   /* Styling of quote section*/
+
+   .design-quote {
+    font-size: 1.5vw;
+    line-height: 1.5;
+  }
+
   /* Styling of contact/footer section */
+
   .animation {
     margin-top: -67px;
   }
