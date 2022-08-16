@@ -18,7 +18,7 @@
   -moz-box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-}
+} 
 
 /* General styling */
 
@@ -286,12 +286,12 @@ nav,
   text-decoration-color: var(--main-accent-color);
   text-underline-position: from-font;
   text-decoration-thickness: 0.08em;
+  transition: all 1s ease;
 }
 
 .red-underline:hover {
   text-decoration-color: var(--main-bg-color);
   color: var(--main-accent-color);
-  transition: all 1s ease;
 }
 
 /* Styling of feature projects section */
@@ -317,11 +317,11 @@ nav,
 }
 
 .second-project .image-wrapper {
-  border: 20px solid var(--sec-bg-color);
+  border: 20px solid var(--main-bg-color);
 }
 
 .project-image {
-  object-fit: cover;
+  object-fit: scale-down;
   height: 100%;
   width: 100%;
 }
@@ -335,7 +335,7 @@ nav,
 .second-project .image-group,
 .second-project .project-info {
   color: var(--my-black-2);
-  background-color: var(--sec-bg-color);
+  background-color: var(--main-bg-color);
 }
 
 .project-info {
@@ -382,6 +382,53 @@ nav,
 
 /* Styling of more projects section */
 
+.accordion {
+  border-bottom: 1px solid var(--my-black-2);
+}
+
+.project-content {
+    display: none;
+}
+
+.active + .project-content {
+  display: flex;
+  flex-direction: row;
+  margin: 3vw 10px 10px;
+}
+
+.content-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  text-align: left;
+}
+
+.content-text p { 
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.project-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 50%;
+}
+
+.project-links h5 {
+  margin-left: 1em;
+  text-align: right;
+}
+
+.project-content h5 { 
+  font-size: 3vw;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
 .ui-code-cases {
   text-align: center;
   padding: 80px 0;
@@ -403,17 +450,19 @@ nav,
   font-size: 14px;
   padding: 10px;
   height: 80px;
-  border-bottom: 1px solid var(--my-black-2);
 }
 
 .case-row:hover {
-  background-color: var(--sec-accent-color);
+  /* background-color: var(--sec-accent-color);
+  color: var(--main-bg-color);  */
+  background-color: #333333;
+  color: var(--main-bg-color);
   transition: all 1.5s ease;
 }
 
 .case-row h5:hover {
   color: var(--main-bg-color);
-  transition: all 1s ease;
+  transition: all 1.5s ease;
 }
 
 .ux-code-cases {
@@ -712,6 +761,10 @@ footer a {
     background-color: var(--main-bg-color);
   }
 
+  .second-project .project-info  {
+    background-color: var(--sec-bg-color);
+  }
+
   .project-name {
     font-size: 3.5vw;
     margin-bottom: 1.5vw;
@@ -728,6 +781,14 @@ footer a {
   }
 
   /* Styling of more projects section*/
+
+ .project-content h5 {
+    font-size: 1.5vw;
+  }
+
+  .project-links h5 {
+    margin-left: 1.5vw;
+  }
 
   .ui-code-cases {
     padding: 13vw 0;
