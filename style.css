@@ -388,12 +388,17 @@ nav,
 
 .project-content {
     display: none;
+    transform:scaleY(0);
 }
 
 .active + .project-content {
   display: flex;
   flex-direction: row;
   margin: 3vw 10px 10px;
+  transition: transform 0.3s ease-out; 
+  height: auto;
+  transform: scaleY(1);
+  transform-origin: top; 
 }
 
 .content-text {
