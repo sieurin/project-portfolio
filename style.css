@@ -457,6 +457,16 @@ nav,
   height: 80px;
 }
 
+.case-row::before {
+  content: "+";
+  position: absolute;
+  right: 5.5rem;
+}
+
+.case-row.active::before {
+  content: "-";
+}
+
 .case-row:hover {
   /* background-color: var(--sec-accent-color);
   color: var(--main-bg-color);  */
@@ -801,6 +811,12 @@ footer a {
 
   .case-row {
     height: 140px;
+  }
+
+  .case-row::before {
+    content: "+";
+    position: absolute;
+    right: 7rem;
   }
 
   .case-row h5 {
